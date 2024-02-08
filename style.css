@@ -1,7 +1,7 @@
 /* Add this to your CSS file */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,21 +10,21 @@
   position: fixed;
   top: 0;
   width: 100%;
- /* background-color: rgba(255, 255, 255, 0.9);  *//* adjust the opacity as needed */
+  /*background-color: rgba(143, 136, 136, 0.9);  adjust the opacity as needed */
   z-index: 1000; /* ensure it's above other elements */
 }
 
-.header h1 {
+.navbar h1 {
   color: rgb(218, 30, 218);
   margin: 0; /* remove default margin */
 }
 
-.header-right {
+.navbar-right {
   display: flex;
   align-items: center;
 }
 
-.header-right a {
+.navbar-right a {
   display: inline-block;
   padding: 8px 16px;
   background-color: #1caaca;
@@ -34,14 +34,25 @@
   transition: background-color 0.3s ease;
 }
 
-.header-right a:hover {
+.navbar-right a:hover {
   background-color: #625ac4;
 }
 
-.header-right span {
+.navbar-right span {
   margin-right: 10px;
   color: rgb(218, 30, 218);
 }
+
+@media (max-width: 800px) {
+
+
+  .navbar h1 {
+    font-size: 14px;
+  }
+
+}
+
+
 
 :root {
     --primary-color: #356aff;
@@ -331,7 +342,8 @@
   @media (max-width: 800px) {
     .container {
       width: 100%;
-      margin-top: 20px;
+      margin-top: 80px; /* Add margin between navbar and container */
+     /* margin-bottom: 20px;  Add margin at the bottom of container if needed */
       flex-direction: column;
     }
     .container .card {
